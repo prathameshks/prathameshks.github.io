@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prathamesh Sable</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="">
-        <a href="./APWProject/">AIR POLLUTION & WEATHER PROJECT</a>
-        <br>
-        <a href="./mypasswordwallet/">MY PASSWORD WALLET</a>
-    </div>
+    <header>
+        <img src="https://codetheweb.blog/assets/img/icon2.png">
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="https://github.com/prathameshks">Github</a></li>
+                <li><a href="https://in.linkedin.com/in/prathamesh-sable">LinkedIn</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                <button onclick="change_theme();">O</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="linkedinlight" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large"
+            data-theme="light" data-type="HORIZONTAL" data-vanity="prathamesh-sable" data-version="v1"><a
+                class="badge-base__link LI-simple-link"
+                href="https://in.linkedin.com/in/prathamesh-sable?trk=profile-badge">Prathamesh Sable</a></div>
+        <div id="linkedindark" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large"
+            data-theme="dark" data-type="HORIZONTAL" data-vanity="prathamesh-sable" data-version="v1"><a
+                class="badge-base__link LI-simple-link"
+                href="https://in.linkedin.com/in/prathamesh-sable?trk=profile-badge">Prathamesh Sable</a></div>
+
+    </main>
+
 </body>
+<script src="./assets/script.js">
+    var ldark = document.getElementById("linkedindark");
+    ldark.setAttribute('visibility', 'hidden');
+</script>
+
 </html>
