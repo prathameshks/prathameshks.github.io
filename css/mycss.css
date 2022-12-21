@@ -3,3 +3,14 @@
     text-align: center;
     
 }
+
+.projImg{
+    width: 50%;
+    height: 50%;
+    margin: 25% 25%;
+    margin-top: 10%;
+}
+
+.stickright{
+    margin-right: 5%;
+}
