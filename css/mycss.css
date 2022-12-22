@@ -14,3 +14,30 @@
 .stickright{
     margin-right: 5%;
 }
+
+.footer_area{
+    background-color: rgb(208, 208, 208);
+}
+
+.f_title h3{
+    color: rgb(27, 26, 26);
+}
+
+.ab_widget p, .social_widget p,.social_widget .list li a{
+    color: rgb(59, 59, 59);
+}
+
+.edudetails{
+    cursor:default;
+}
+
+.eduimg{
+    width: 600px;
+}
+
+
+.projectdetails{
+    margin:5% 0%;
+    padding:5% 5%;
+    border: 1px solid rgba(166, 125, 237, 0.431);
+}
