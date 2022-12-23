@@ -1,43 +1,157 @@
-.center{
-    
+.center {
+
     text-align: center;
-    
+
 }
 
-.projImg{
+.projImg {
     width: 50%;
     height: 50%;
     margin: 25% 25%;
     margin-top: 10%;
 }
 
-.stickright{
+.stickright {
     margin-right: 5%;
 }
 
-.footer_area{
+.footer_area {
     background-color: rgb(208, 208, 208);
 }
 
-.f_title h3{
+.f_title h3 {
     color: rgb(27, 26, 26);
 }
 
-.ab_widget p, .social_widget p,.social_widget .list li a{
+.ab_widget p,
+.social_widget p,
+.social_widget .list li a {
     color: rgb(59, 59, 59);
 }
 
-.edudetails{
-    cursor:default;
+.edudetails {
+    cursor: default;
 }
 
-.eduimg{
+.eduimg {
     width: 600px;
 }
 
 
-.projectdetails{
-    margin:5% 0%;
-    padding:5% 5%;
+.projectdetails {
+    margin: 5% 0%;
+    padding: 5% 5%;
     border: 1px solid rgba(166, 125, 237, 0.431);
+}
+
+
+.sample-text-justify {
+    text-align: justify;
+}
+
+
+
+/* writing animation  */
+.output {
+    min-height: 50px;
+}
+
+/* .output h1 ,.output p {
+    text-align: center;
+} */
+
+/* Cursor Styling */
+
+.cursor::after {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+h1.cursor::after {
+    height: 24px;
+    width: 13px;
+}
+
+p.cursor::after {
+    height: 13px;
+    width: 6px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.bordercard {
+    border: 1px solid #9ab9b98f;
+}
+
+.featurecard {
+    padding: 50px 35px;
+    border-radius: 10px;
+    transition: all 300ms linear 0s;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.feature_item:hover {
+    box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+    border-color: #fff;
+}
+
+
+.rightimage {
+    width: 100%;
+    height: auto;
+}
+
+
+.feedbackrow {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 10%; */
+}
+
+.containerfeedback {
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
+    display: flex;
+    max-height: min-content;
+}
+
+.imagefeedback {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/* submit overlay */
+
+.show_sucess {
+    display: block;
+    opacity: 1;
+    padding: 15px;
+}
+
+.displaynone{
+    display: none;
 }
