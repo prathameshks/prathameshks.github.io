@@ -18,16 +18,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Prathamesh Sable - Portfolio
+email: prathameshks2003@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hello I'm Prathamesh, an enthusiastic programmer and Undergraduate Student at MESCOE, Pune. Explore a showcase of innovative projects, highlighting his diverse skills in Programming Languages & Technologies. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://prathameshks.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+variables:
+  instagram : 
+    url : https://www.instagram.com/prathamesh.ks/
+    username : prathamesh.ks
+  facebook : 
+    url : https://www.facebook.com/prathamesh.sable.2003/
+    username : prathamesh.sable.2003
+  twitter : 
+    url : https://twitter.com/prathamesh_ks/
+    username : prathamesh_ks
+  linkedin : 
+    url : https://www.linkedin.com/in/prathamesh-sable/
+    username : prathamesh-sable
+  github :
+    url : https://github.com/prathameshks
+    username : prathameshks
+  email :
+    url : mailto:prathameshks2003@gmail.com
+    id : prathameshks2003@gmail.com
+  
+
 
 # Build settings
 theme: minima
@@ -41,15 +59,12 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - Old Site/
+  - readme.md

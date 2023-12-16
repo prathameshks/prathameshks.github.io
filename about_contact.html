@@ -23,14 +23,7 @@
 
 	<!-- added by me  -->
 	<link rel="stylesheet" href="css/mycss.css">
-	<style>
-		.activeaboutcontact {
-			background: linear-gradient(to right, #808ae3 0%, #6cc2ff 48%, #515ed4 100%);
-			background-clip: unset;
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-		}
-	</style>
+
 </head>
 
 <body>
@@ -474,6 +467,8 @@
 	<!-- <script src="assets/js/jquery.min.js"></script> -->
 	<script type="text/javascript">var submitted = false;</script>
 	<script type="text/javascript">
+		document.getElementById("aboutnavlink").classList.add("active");
+
 		$('#gform').on('submit', function (e) {
 			document.getElementById("gform").style.display = 'none';
 			document.getElementById("info").classList.remove("displaynone");

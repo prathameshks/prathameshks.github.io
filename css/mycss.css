@@ -4,6 +4,13 @@
 
 }
 
+.activenav {
+    background: linear-gradient(to top, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+    background-clip: unset;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 .projImg {
     width: 50%;
     height: 50%;
