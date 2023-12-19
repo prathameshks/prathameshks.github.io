@@ -25,27 +25,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prathameshks.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-variables:
-  instagram : 
-    url : https://www.instagram.com/prathamesh.ks/
-    username : prathamesh.ks
-  facebook : 
-    url : https://www.facebook.com/prathamesh.sable.2003/
-    username : prathamesh.sable.2003
-  twitter : 
-    url : https://twitter.com/prathamesh_ks/
-    username : prathamesh_ks
-  linkedin : 
-    url : https://www.linkedin.com/in/prathamesh-sable/
-    username : prathamesh-sable
-  github :
-    url : https://github.com/prathameshks
-    username : prathameshks
-  email :
-    url : mailto:prathameshks2003@gmail.com
-    id : prathameshks2003@gmail.com
-  
-
 
 # Build settings
 theme: minima

@@ -1,0 +1,54 @@
+{
+  "social": {
+    "instagram": {
+      "url": "https://www.instagram.com/prathamesh.ks/",
+      "username": "prathamesh.ks"
+    },
+    "facebook": {
+      "url": "https://www.facebook.com/prathamesh.sable.2003/",
+      "username": "prathamesh.sable.2003"
+    },
+    "twitter": {
+      "url": "https://twitter.com/prathamesh_ks/",
+      "username": "prathamesh_ks"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/prathamesh-sable/",
+      "username": "prathamesh-sable"
+    },
+    "github": {
+      "url": "https://github.com/prathameshks",
+      "username": "prathameshks"
+    },
+    "email": {
+      "url": "mailto:prathameshks2003@gmail.com",
+      "id": "prathameshks2003@gmail.com"
+    }
+  },
+  "about": {
+    "name": "Prathamesh Sable",
+    "email": "prathameshks2003@gmail.com",
+    "long_bio": "I am a Passionate computer engineering student and experienced programmer, eager to create innovative software solutions. I'm currently pursuing my undergraduate degree at Modern Education Society's College of Engineering, Pune, specializing in computer engineering.    Beyond academics, I lead the developer team at Techverse, the technical club at my college. Previously, I held the role of Campus Ambassador for Geeks for Geeks in 2022-23. My tech skillset spans diverse languages and technologies including Python, C/C++, Git/GitHub, Django, backend web development, and SQL. I'm a driven learner, always excited to experiment with new technologies and confident in my ability to adapt and excel in any project. I look forward to connecting and sharing my portfolio with you!",
+    "bio": "I'm a passionate programmer and computer engineering student at Modern Education Society's College, Pune. I love building innovative software, and I'm always eager to learn new technologies. My skills include Python, C/C++, Django, and backend web development. As Developer Lead at Techverse, I lead a team of talented engineers. I'm excited to connect and share my portfolio!",
+    "summery": "As an experienced programmer and undergraduate student at Modern Education Society's College of Engineering, Pune, I am passionate about creating innovative software solutions. I have honed my skills in a variety of programming languages and technologies, and I am always eager to learn and experiment with new technologies. In addition to my studies, I serve as a Developer Lead at Techverse, MESWCOE, and was a Campus Ambassador for Geeks for Geeks in 2022-23. I am confident in my ability to adapt and excel in any project, and I look forward to sharing my portfolio with you.",
+    "location": "MES Wadia College Of Engineering, Pune (MH), India",
+    "pin_code": "411001",
+    "education": "B.E. Computer Engineering",
+    "languages": ["English", "Hindi", "Marathi"],
+    "interests": [
+      "Programming",
+      "Web Development",
+      "Machine Learning",
+      "Competitive Programming",
+      "Reading",
+      "Music"
+    ]
+  },
+  "experience_years": 3,
+  "total_projects": 5,
+  "total_connections": 300,
+  "resume": {
+    "link": "/docs/prathamesh_sable_resume.pdf",
+    "name": "Prathamesh_Sable_Resume.pdf"
+  }
+}

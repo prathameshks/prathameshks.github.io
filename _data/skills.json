@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Python",
+    "percentage": 90
+  },
+  {
+    "name": "C/C++",
+    "percentage": 85
+  },
+  {
+    "name": "Git/Github",
+    "percentage": 80
+  },
+  {
+    "name": "Django",
+    "percentage": 75
+  },
+  {
+    "name": "Web Development Backend",
+    "percentage": 70
+  },
+  {
+    "name": "Java (Learning)",
+    "percentage": 30
+  }
+]

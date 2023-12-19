@@ -3,23 +3,27 @@ permalink: /404.html
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<!-- include header -->
+{% include navbar.html %}
 
-<div class="container">
-  <h1>404</h1>
+<section class="feature_area p_120">
+  <div class="container">
+    <div style="margin: 10px auto; max-width: 600px; text-align: center;">
+      <h1 style="margin: 30px 0; font-size: 4em; line-height: 1; letter-spacing: -1px;">404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+      <p><strong>Page Not Found</strong></p>
+      <p>Unfortunately, the page you're looking for could not be found.</p>
+      <p>If you believe this is an error, I would appreciate it if you could let me know through the contact options on my Contact page.</p>
+      <a href="/contact.html" class="banner_btn">Contact Me</a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+{% include footer.html %}
+
+<!-- Credits -->
+<div style="display: flex; justify-content: right;width: 95%;">
+  {% include credits.html %}
 </div>

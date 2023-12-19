@@ -20,12 +20,21 @@ title: Prathamesh Sable
 					<div class="banner_content">
 						<h5>Hi, This is me</h5>
 						<h2>Prathamesh Sable</h2>
-						<p>Welcome! I am a skilled and experienced programmer with a passion for creating innovative
-							software solutions. Here, you'll find a showcase of my past projects and technical
-							skills. I hope my portfolio gives you a good idea of my capabilities as a programmer and
-							helps you understand how I can contribute to your team.<br> Thank you for visiting!</p>
-						<a class="banner_btn" href="/docs/prathamesh_sable_resume.pdf"
-							download="/docs/prathamesh_sable_resume.pdf">Download My Resume</a>
+						<p> <strong>Welcome!</strong>
+							I am a skilled and experienced programmer with a passion for creating innovative software
+							solutions.
+							Currently, I am an Undergraduate Student at MESCOE,Pune. I have developed a diverse range of
+							skills in
+							Programming Languages & Technologies. I am excited to continue growing as a programmer and to take
+							on new
+							challenges.
+							<br />
+							<i style="color: #8490ff;">
+								Thank you for visiting, I would like to connect with you!
+							</i>
+						</p>
+						<a class="banner_btn" href="{{ site.data.vars.resume.link }}"
+							download="{{ site.data.vars.resume.name }}">Download My Resume</a>
 					</div>
 				</div>
 			</div>
@@ -41,32 +50,36 @@ title: Prathamesh Sable
 			<div class="col-lg-6">
 				<div class="welcome_text">
 					<h4>About Myself</h4>
-					<p>Hi there! My name is Prathamesh Sable, and I am a programmer with a strong passion for
-						creating innovative programs. Currently, I am an Undergraduate Student at MESCOE,Pune. I
-						have developed a diverse range of skills in Programming Languages & Technologies. I am
-						always eager to learn and try out new technologies, and I am confident in my ability to
-						adapt and excel in any project. In my career, I have had the opportunity to work on a
-						variety of projects. I am excited to continue growing as a programmer and to take on new
-						challenges.<br>Thank you for visiting, I would like to connect with you!</p>
+					<p class="sample-text-justify">
+						<strong>About:</strong> {{ site.data.vars.about.bio }}
+						<br />
+						<strong>Languages Known:</strong> {{ site.data.vars.about.languages | join: ', ' }}
+						<br />
+						<strong>Interests:</strong> {{ site.data.vars.about.interests | join: ', ' }}
+						<br />
+						<strong>Education:</strong> {{ site.data.vars.about.education }}
+						<br />
+						<strong>Address:</strong> {{ site.data.vars.about.location }}, {{ site.data.vars.about.pin_code }}
+					</p>
 					<div class="row">
 						<div class="col-md-4">
 							<div class="wel_item">
 								<i class="lnr lnr-database"></i>
-								<h4>3 Years</h4>
+								<h4>{{ site.data.vars.experience_years }} Years</h4>
 								<p>Experience</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="wel_item">
 								<i class="lnr lnr-book"></i>
-								<h4>4</h4>
+								<h4>{{ site.data.vars.total_projects }}</h4>
 								<p>Total Projects</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="wel_item">
 								<i class="lnr lnr-users"></i>
-								<h4>200+</h4>
+								<h4>{{ site.data.vars.total_connections }}+</h4>
 								<p>Connections</p>
 							</div>
 						</div>
@@ -75,44 +88,18 @@ title: Prathamesh Sable
 			</div>
 			<div class="col-lg-6">
 				<div class="tools_expert">
-					<h3>Programming Languages</h3>
+					<h3>My Skills</h3>
 					<div class="skill_main">
+						{% for skill in site.data.skills %}
 						<div class="skill_item">
-							<h4>Python <span class="counter">90</span>%</h4>
+							<h4>{{ skill.name }} - <span class="counter">{{ skill.percentage }}</span>%</h4>
 							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-									aria-valuemax="100"></div>
+								<div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.percentage }}"
+									aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
-						<div class="skill_item">
-							<h4>C / C++ <span class="counter">85</span>%</h4>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
+						{% endfor %}
 
-						<div class="skill_item">
-							<h4>Git/Github <span class="counter">80</span>%</h4>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_item">
-							<h4>Web Development <span class="counter">70</span>%</h4>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class="skill_item">
-							<h4>Java (Learning)<span class="counter">10</span>%</h4>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
 						<!-- <div class="skill_item">
 								<h4>Linux <span class="counter">75</span>%</h4>
 								<div class="progress">
@@ -369,8 +356,9 @@ title: Prathamesh Sable
 {% include footer.html %}
 
 <!-- Credits -->
-{% include credits.html %}
-
+<div style="display: flex; justify-content: right;width: 95%;">
+	{% include credits.html %}
+</div>
 <script>
-	document.getElementById("homenavlink").classList.add("active");
+	document.getElementById("homenavlink").classList.add("activenav");
 </script>
