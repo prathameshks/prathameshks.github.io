@@ -7,59 +7,111 @@ layout: default
 
 <!--================Home Banner Area =================-->
 <section class="banner_area">
-	<div class="banner_inner d-flex align-items-center">
-		<!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+  <div class="banner_inner d-flex align-items-center">
+    <!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
 				data-background=""></div> -->
-		<div class="container">
-			<div class="banner_content text-center">
-				<h2>{{ page.title }}</h2>
-				<div class="page_link">
-					<a class="edudetails">Home</a>
-					<a class="edudetails">Projects</a>
-					<a class="edudetails"> {{ page.title }} </a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+      <div class="banner_content text-center">
+        <h2>{{ page.title }}</h2>
+        <div class="page_link">
+          <a class="edudetails">Home</a>
+          <a class="edudetails">Projects</a>
+          <a class="edudetails"> {{ page.title }} </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!--================End Home Banner Area =================-->
 
 
-<article class="project">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p class="meta">Completed: {{ page.completed }}</p>
-  </header>
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area p_120">
+  <div class="container">
+    <div class="row" style="display: flex">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post row">
+          <div class="col-lg-12">
+            <div class="feature-img"><img class="img-fluid" src="{{ page.thumbnail }}" alt="Image" /></div>
+            <div class="">
+              {% if page.features.size > 0 %}
+              <p>
+              <h5> Features: </h5>
+              <ul>
+                {% for feature in page.features %}
+                <li>{{ feature }}</li>
+                {% endfor %}
+              </ul>
+              </p>
+              {% endif %}
+              {% if page.technology_used.size > 0 %}
+              <p>
+              <h5> Technology Used: </h5>{{ page.technology_used | join: ", " }}
+              </p>
+              {% endif %}
+              <div class="quotes">
+                {{ page.description }}
+              </div>
 
-  <div class="project-content">
-    <img src="{{ page.image }}" alt="{{ page.title }} Image">
-    <p>{{ page.description }}</p>
-    <p>Location: {{ page.location }}</p>
-    <p>GitHub: <a href="{{ page.github }}">{{ page.github }}</a></p>
-    <p>Technology Used: {{ page.technology_used }}</p>
-    <h2>Features:</h2>
-    <ul>
-      {% for feature in page.features %}
-        <li>{{ feature }}</li>
-      {% endfor %}
-    </ul>
+            </div>
+          </div>
+
+
+          <div class="col-lg-12 col-md-12 blog_details">
+            <div class="content_preview">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="blog_right_sidebar">
+          <aside class="single_sidebar_widget search_widget">
+            <div class="input-group">
+              <div class="blog_info text-right">
+                <ul class="blog_meta list">
+                  <li>
+                    <div class="post_tag">
+                      <a class="active">{{ page.project_level }} Level</a>
+                    </div>
+                  </li>
+
+                  <li><a href="#">{{ page.location }}</a></li>
+
+                  {% if page.github_repo_available %}
+                  <li><a class="active" href="{{ page.github_repo }}">{{ page.github_repo | truncate: 25, '...' }}</a>
+                  </li>
+                  {% endif %}
+                  {% if page.is_live %}
+                  <li><a class="active" href="{{ page.live_url }}">Live Preview</a></li>
+                  {% endif %}
+                  {% if page.is_completed %}
+                  <li><a href="#">{{ page.completed_date }}</a></li>
+                  {% endif %}
+
+                  <!-- <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3"></div>
+    </div>
   </div>
+</section>
+<!--================Blog Area =================-->
 
-  {{ content }}
-
-  <footer>
-    <a href="{{ page.website }}">Visit Website</a>
-  </footer>
-</article>
 
 <!-- include footer -->
 {% include footer.html %}
 
 <!-- Credits -->
 <div style="display: flex; justify-content: right;width: 95%;">
-	{% include credits.html %}
+  {% include credits.html %}
 </div>
 
 <script>
-	document.getElementById("projectnavlink").classList.add("activenav");
+  document.getElementById("projectnavlink").classList.add("activenav");
 </script>
