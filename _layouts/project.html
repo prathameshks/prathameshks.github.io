@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<!-- include header -->
+{% include navbar.html %}
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+	<div class="banner_inner d-flex align-items-center">
+		<!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+				data-background=""></div> -->
+		<div class="container">
+			<div class="banner_content text-center">
+				<h2>{{ page.title }}</h2>
+				<div class="page_link">
+					<a class="edudetails">Home</a>
+					<a class="edudetails">Projects</a>
+					<a class="edudetails"> {{ page.title }} </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--================End Home Banner Area =================-->
+
+
+<article class="project">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">Completed: {{ page.completed }}</p>
+  </header>
+
+  <div class="project-content">
+    <img src="{{ page.image }}" alt="{{ page.title }} Image">
+    <p>{{ page.description }}</p>
+    <p>Location: {{ page.location }}</p>
+    <p>GitHub: <a href="{{ page.github }}">{{ page.github }}</a></p>
+    <p>Technology Used: {{ page.technology_used }}</p>
+    <h2>Features:</h2>
+    <ul>
+      {% for feature in page.features %}
+        <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {{ content }}
+
+  <footer>
+    <a href="{{ page.website }}">Visit Website</a>
+  </footer>
+</article>
+
+<!-- include footer -->
+{% include footer.html %}
+
+<!-- Credits -->
+<div style="display: flex; justify-content: right;width: 95%;">
+	{% include credits.html %}
+</div>
+
+<script>
+	document.getElementById("projectnavlink").classList.add("activenav");
+</script>
