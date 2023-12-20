@@ -156,6 +156,17 @@ p.cursor::after {
     max-height: 100%;
 }
 
+.anchor-no-dec{
+    text-decoration: none;
+    color: black;
+}
+
+.anchor-no-dec:hover{
+    text-decoration: none;
+    color: linear-gradient(to top, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+    cursor: pointer;
+}
+
 
 
 /* submit overlay */
