@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Air Pollution Tracking
+title: Pollution Tracking
 is_public: true
 is_featured: true
 thumbnail: /img/projects/air-pollution-weather-banner.png
