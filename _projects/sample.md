@@ -1,6 +1,8 @@
 ---
 layout: project
+rank: 10
 title: Sample Project Title
+featured_name: Sample Project
 is_public: false
 is_featured: true
 thumbnail: /path/to/image.jpg

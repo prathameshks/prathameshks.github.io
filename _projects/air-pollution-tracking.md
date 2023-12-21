@@ -1,7 +1,8 @@
 ---
 layout: project
-rank: 4
-title: Pollution Tracking
+rank: 7
+featured_name: Pollution Tracker
+title: Air Pollution & Weather Tracking
 is_public: true
 is_featured: true
 thumbnail: /img/projects/air-pollution-weather-banner.png

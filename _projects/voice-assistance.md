@@ -1,12 +1,13 @@
 ---
 layout: project
-rank: 3
-title: Voice Assistance
+rank: 5
+title: Simple Voice Assistance in Python
+featured_name: Voice Assistance
 is_public: true
-is_featured: true
+is_featured: false
 thumbnail: /img/projects/voice-assistance-banner.png
 short_description: The purpose of this project is to create a simple voice assistance tool that can perform basic tasks and provide information to the user. This could include tasks such as setting alarms, checking the weather, or answering simple questions.<br> It was a lot of fun creating and using my own voice assistant.
-project_level: Intermediate
+project_level: Beginner
 self_rating: 4
 location: JNV Tuljapur & MESWCOE pune
 github_repo_available: true

@@ -1,9 +1,10 @@
 ---
 layout: project
-rank: 1
-title: My Password Wallet
+rank: 6
+title: My Password Wallet Password Manager
+featured_name: Password Manager
 is_public: true
-is_featured: true
+is_featured: false
 thumbnail: /img/projects/my-password-wallet-banner.png
 short_description: The purpose of this project is to create a password manager tool that helps users securely store and manage their passwords. The password manager should allow users to store passwords as well as other details for each of their accounts, and provide an easy and secure way for them to access their passwords when needed.
 project_level: Intermediate

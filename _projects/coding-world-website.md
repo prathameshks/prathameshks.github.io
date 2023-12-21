@@ -2,11 +2,12 @@
 layout: project
 rank: 10
 title: Coding World Website
+featured_name: Coding World
 is_public: true
 is_featured: false
 thumbnail: /img/projects/coding-world-website-banner.png
 short_description: The purpose of this project is to create a website for a YouTube channel that focuses on coding and technology. The website will serve as a hub for the channel's content, allowing viewers to access videos, articles, and other resources related to coding and technology.
-project_level: Intermediate
+project_level: Beginner
 self_rating: 3
 location: MESWCOE, Pune
 github_repo_available: true
