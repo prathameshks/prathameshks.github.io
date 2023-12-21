@@ -1,5 +1,6 @@
 ---
 layout: project
+rank: 1
 title: My Password Wallet
 is_public: true
 is_featured: true

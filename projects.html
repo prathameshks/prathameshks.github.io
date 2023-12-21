@@ -46,7 +46,8 @@ title: Projects | Prathamesh Sable
 <section class="portfolio_details_area ">
 	<div class="container">
 
-{% for project in projects %}
+{% assign sortedProjects = projects | sort: 'rank' %}
+{% for project in sortedProjects %}
 		<!-- ***** project start -->
 		<div class="portfolio_details_inner projectdetails">
 			<div class="row">

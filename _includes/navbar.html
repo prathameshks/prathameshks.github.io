@@ -24,7 +24,8 @@
                                 aria-expanded="false">Projects</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link nav-highlight" href="/projects.html">All Projects</a></li>
-                                {% for project in site.projects %}
+                                {% assign sortedProjects = site.projects | sort: 'rank' %}
+                                {% for project in sortedProjects %}
                                 <!-- if project is public and is featured -->
                                 {% if project.is_public and project.is_featured %}
                                 <li class="nav-item"><a class="nav-link" href="{{ project.url }}">{{ project.title }}</a></li>

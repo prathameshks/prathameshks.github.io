@@ -1,5 +1,6 @@
 ---
 layout: project
+rank: 4
 title: Pollution Tracking
 is_public: true
 is_featured: true

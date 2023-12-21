@@ -1,5 +1,6 @@
 ---
 layout: project
+rank: 3
 title: Voice Assistance
 is_public: true
 is_featured: true

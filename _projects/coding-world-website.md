@@ -1,5 +1,6 @@
 ---
 layout: project
+rank: 10
 title: Coding World Website
 is_public: true
 is_featured: false
