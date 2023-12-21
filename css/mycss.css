@@ -11,7 +11,7 @@
     -webkit-background-clip: text;
 }
 
-.nav-link:hover {
+.main-nav-link:hover {
     background: linear-gradient(to top, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
     background-clip: unset;
     -webkit-text-fill-color: transparent;
@@ -56,6 +56,7 @@
     margin: 5% 0%;
     padding: 5% 5%;
     border: 1px solid rgba(166, 125, 237, 0.431);
+    border-radius: 2%;
 }
 
 
@@ -158,7 +159,7 @@ p.cursor::after {
 
 .anchor-no-dec{
     text-decoration: none;
-    color: black;
+    color: #3b3b3b;
 }
 
 .anchor-no-dec:hover{
@@ -180,3 +181,39 @@ p.cursor::after {
 .displaynone{
     display: none;
 }
+
+/* rotate text shadow left to right  */
+@keyframes text-shadow-left-to-right {
+    0% {
+        text-shadow: linear-gradient(to top, #8490ff 0%, #62bdfc 48%, #8490ff 100%) 2px 2px 5px;
+    }
+
+    100% {
+        text-shadow: rgba(255, 255, 255, 0.432) 0px 0px 5px;
+    }
+}
+
+.nav-highlight {
+    background: linear-gradient(to top, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+    background-clip: unset;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: text-shadow-left-to-right 1s infinite;
+}
+
+.nav-highlight:hover {
+    color: #fff;    
+    -webkit-text-fill-color: #fff;
+    animation: none;
+}
+
+.content_preview{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.content_preview img{
+    width: 100%;
+    height: auto;
+} 

@@ -25,7 +25,8 @@ title: Prathamesh Sable
 							solutions.
 							Currently, I am an Undergraduate Student at MESCOE,Pune. I have developed a diverse range of
 							skills in
-							Programming Languages & Technologies. I am excited to continue growing as a programmer and to take
+							Programming Languages & Technologies. I am excited to continue growing as a programmer and
+							to take
 							on new
 							challenges.
 							<br />
@@ -59,20 +60,21 @@ title: Prathamesh Sable
 						<br />
 						<strong>Education:</strong> {{ site.data.vars.about.education }}
 						<br />
-						<strong>Address:</strong> {{ site.data.vars.about.location }}, {{ site.data.vars.about.pin_code }}
+						<strong>Address:</strong> {{ site.data.vars.about.location }}, {{ site.data.vars.about.pin_code
+						}}
 					</p>
 					<div class="row">
 						<div class="col-md-4">
 							<div class="wel_item">
 								<i class="lnr lnr-database"></i>
-								<h4>{{ site.data.vars.experience_years }} Years</h4>
+								<h4> <span id="experience_year"></span> Years</h4>
 								<p>Experience</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="wel_item">
 								<i class="lnr lnr-book"></i>
-								<h4>{{ site.data.vars.total_projects }}</h4>
+								<h4>{{ site.projects | where: "is_public", true | size }}</h4>
 								<p>Total Projects</p>
 							</div>
 						</div>
@@ -164,7 +166,9 @@ title: Prathamesh Sable
 						<br><br>
 						<h4>Django</h4>
 					</div>
-					<p>I have been working with Django for over a year now.I like Django due to its simplicity and the powerful tools it provides.  I have used Django in several of my projects and web applications. Specifically in Django REST Framework</p>
+					<p>I have been working with Django for over a year now.I like Django due to its simplicity and the
+						powerful tools it provides. I have used Django in several of my projects and web applications.
+						Specifically in Django REST Framework</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
@@ -174,7 +178,9 @@ title: Prathamesh Sable
 						<br><br>
 						<h4>SQL</h4>
 					</div>
-					<p>I have been working with SQL, specifically MySQL and PL/SQL, for past three years. I have a strong understanding of database concepts. I am proficient in writing SQL queries. I have used SQL extensively in my projects.</p>
+					<p>I have been working with SQL, specifically MySQL and PL/SQL, for past three years. I have a
+						strong understanding of database concepts. I am proficient in writing SQL queries. I have used
+						SQL extensively in my projects.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
@@ -380,4 +386,9 @@ title: Prathamesh Sable
 </div>
 <script>
 	document.getElementById("homenavlink").classList.add("activenav");
+
+	var currentYear = new Date().getFullYear();
+	var startYear = {{ site.data.vars.start_year }};
+	var exp_years = currentYear - startYear;
+	document.getElementById('experience_year').innerText = exp_years;
 </script>
