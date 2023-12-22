@@ -68,7 +68,7 @@ title: Projects | Prathamesh Sable
 							<li><span>Location</span>: {{ project.location }} </li>
 							{% if project.github_repo_available %}
 							<li><span>Github </span>: <a target="_blank"
-									href="{{ project.github_repo }}">{{ project.github_repo | truncate: 25, '...' }}</a></li>
+									href="{{ project.github_repo }}">{{ project.github_repo | remove_first: 'https://' | truncate: 25, '...' }}</a></li>
 							{% endif %}
 							{% if project.is_completed %}
 							<li><span>Completed</span>: {{ project.completed_date }}</li>

@@ -44,7 +44,7 @@ layout: default
                   </li>
 
                   {% if page.github_repo_available %}
-                  <li><a class="active" href="{{ page.github_repo }}">{{ page.github_repo | truncate: 25, '...' }}</a>
+                  <li><a class="active" href="{{ page.github_repo }}">{{ page.github_repo | remove_first: 'https://' }}</a>
                   </li>
                   {% endif %}
                   {% if page.is_live %}
