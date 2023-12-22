@@ -52,3 +52,4 @@ exclude:
   - Old Site/
   - readme.md
   - _projects/sample.md
+  - extra/
