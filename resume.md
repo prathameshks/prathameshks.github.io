@@ -13,7 +13,7 @@ Email: prathameshks2003@gmail.com
 
 ## Summary
 
-Passionate backend developer and computer engineering student with a robust proficiency in Python, C++, Django, PHP, REST Framework API, and SQL. Dedicated to creating innovative solutions and contributing to collaborative projects.
+Passionate backend developer and computer engineering student with a robust proficiency in Python, C++, Django, SQL, REST API, and PHP. Dedicated for creating innovative solutions and contributing to collaborative projects.
 
 ## Skills
 
@@ -32,7 +32,7 @@ Passionate backend developer and computer engineering student with a robust prof
 
 **Tech Stack:** Django, AWS Cloud, MySQL, Google Maps API 
 
-- Developed a robust and scalable backend for Andhra Cafe's food delivery website in Pune, utilizing API-based architecture.
+- Led the creation of a strong and adaptable backend for Andhra Cafe's food delivery site in Pune, working closely with the team.
 - Implemented features such as dynamic menu management, Google Maps location picker, automatic delivery charge calculation, and online payment functionality.
 - Integrated the backend with a React frontend using JavaScript.
 - Hosted on AWS EC2 instance with a MySQL database.
@@ -51,7 +51,7 @@ Passionate backend developer and computer engineering student with a robust prof
 
 **Tech Stack:** PHP, MySQL
 
-- Designed a food delivery website for online orders at VIT Chennai campus, leveraging PHP and MySQL technologies.
+- Designed  a  food  delivery  website  for  online  orders  at  VIT  Chennai  campus,  leveraging  PHP  and  MySQL technologies. Worked with a friend for frontend.
 - Implemented a campus-specific order collection system with an admin panel for efficient order management. The website has successfully processed over 400 orders, amounting to nearly 1.5 lakhs.
 - Deployed the website on a server, including domain setup and SSL certificate implementation.
 
@@ -66,9 +66,12 @@ Passionate backend developer and computer engineering student with a robust prof
 
 ## Education
 
-MES Wadia College of Engineering, Pune (Under SPPU)  
-Nov 2021 – Current  
-Third Year of B.E. Computer Engineering, Current GPA: 9.16
+MES Wadia College of Engineering, Pune (Under SPPU) 
+Third Year of B.E. Computer Engineering, Current GPA: 9.16  
+
+Jawahar Navodaya Vidyalaya, Tuljapur, Dist.: Dharashiv (Osmanabad)   
+Higher Secondary School Exam (12th Std.) Percentage: 95.4 % 
+Secondary School Exam (10th Std.) Percentage: 96.2 %
 
 ## Additional Skills
 
