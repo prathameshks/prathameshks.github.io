@@ -29,8 +29,6 @@ technology_used: PHP, MySQL, AJAX
 
 The Baam Foods Website project was aimed at designing a user-friendly food delivery website for taking online orders within the VIT Chennai campus. The website was developed using PHP and MySQL, and it features several pages and an admin panel for managing orders. One of the key features of this website is its ability to send email notifications for each order.
 
-## Project Steps
+## LinkedIn Post 
 
-1. **Step 1**: Designing the user interface.
-2. **Step 2**: Setting up the database using MySQL.
-3. **Step 3**: Implementing the admin panel and email notifications.
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7117086692280274945" height="497" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
