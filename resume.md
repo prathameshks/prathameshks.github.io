@@ -42,7 +42,7 @@ Passionate backend developer and computer engineering student with a robust prof
 
 **Tech Stack:** Django, REST Framework, Jekyll, JavaScript, GitHub Pages, PythonAnywhere
 
-- Developed the backend for the TechVerse MESCOE website, employing API-based architecture.
+- Developed the backend for the TechVerse MES Wadia College of Engineering, Pune website, employing API-based architecture.
 - Integrated a prebuilt frontend made in HTML/CSS and converted it into a Jekyll website for GitHub Pages, with the backend hosted on PythonAnywhere using JavaScript.
 - Implemented features including login functionality for club organizers, event hosting, blogging, registration, and various forms for data collection.
 

@@ -9,7 +9,7 @@ thumbnail: /img/projects/voice-assistance-banner.png
 short_description: The purpose of this project is to create a simple voice assistance tool that can perform basic tasks and provide information to the user. This could include tasks such as setting alarms, checking the weather, or answering simple questions.<br> It was a lot of fun creating and using my own voice assistant.
 project_level: Beginner
 self_rating: 4
-location: JNV Tuljapur & MESWCOE pune
+location: JNV Tuljapur & MES Wadia College of Engineering, Pune pune
 github_repo_available: true
 github_repo: https://github.com/prathameshks/Voice-Assistant
 is_completed: true

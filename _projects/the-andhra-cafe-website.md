@@ -9,7 +9,7 @@ thumbnail: /img/projects/andhra-cafe-banner.png
 short_description: This project involved developing a food delivery website for Andhra Cafe in Pune. The backend was developed using Django and the frontend was built with React. The website is hosted on AWS EC2.
 project_level: Advanced
 self_rating: 5
-location: MESWCOE Pune
+location: MES Wadia College of Engineering, Pune Pune
 github_repo_available: false
 github_repo: https://github.com/prathameshks/sample
 is_completed: false

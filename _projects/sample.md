@@ -9,7 +9,7 @@ thumbnail: /path/to/image.jpg
 short_description: The purpose of this project is to create a sample project
 project_level: Intermediate
 self_rating: 5
-location: MESWCOE Pune
+location: MES Wadia College of Engineering, Pune Pune
 github_repo_available: true
 github_repo: https://github.com/prathameshks/sample
 is_completed: false

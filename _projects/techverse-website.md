@@ -6,7 +6,7 @@ featured_name: Techverse Website
 is_public: true
 is_featured: true
 thumbnail: /img/projects/techverse-website-banner.png
-short_description: This project involved developing the backend for the TechVerse MESCOE website, a technical club at our college. The website was built using Jekyll, HTML, CSS, and JavaScript for the frontend, and Django and REST Framework for the backend. The website is hosted on GitHub Pages and the backend is deployed on PythonAnywhere.
+short_description: This project involved developing the backend for the TechVerse website, a technical club at our college. The website was built using Jekyll, HTML, CSS, and JavaScript for the frontend, and Django and REST Framework for the backend. The website is hosted on GitHub Pages and the backend is deployed on PythonAnywhere.
 project_level: Intermediate
 self_rating: 5
 location: MESWCOE Pune
@@ -27,7 +27,7 @@ technology_used: Jekyll, HTML, CSS, JavaScript, Django, REST Framework, PythonAn
 
 ## Project Overview
 
-The TechVerse MESCOE Website project was aimed at developing a comprehensive platform for the technical club at our college. The website was built using Jekyll, HTML, CSS, and JavaScript for the frontend, and Django and REST Framework for the backend. The website is hosted on GitHub Pages and the backend is deployed on PythonAnywhere.
+The TechVerse's Website project was aimed at developing a comprehensive platform for the technical club at our college. The website was built using Jekyll, HTML, CSS, and JavaScript for the frontend, and Django and REST Framework for the backend. The website is hosted on GitHub Pages and the backend is deployed on PythonAnywhere.
 
 The website includes several features such as an events page, registration and feedback forms, a blogging platform, contact forms, and membership management. One of the key aspects of this project was converting an HTML/CSS template to Jekyll JS.
 
