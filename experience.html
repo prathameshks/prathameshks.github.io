@@ -1,0 +1,118 @@
+---
+layout: default
+description: Hello, I am Prathamesh Sable, a skilled and experienced programmer with a passion for creating innovative software solutions. Here, you'll find a showcase of my past projects and technical skills.
+title: Experience | Prathamesh Sable
+---
+
+<!-- include header -->
+{% include navbar.html %}
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+	<div class="banner_inner d-flex align-items-center">
+		<!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+				data-background=""></div> -->
+		<div class="container">
+			<div class="banner_content text-center">
+				<h2>My Work Experience</h2>
+				<div class="page_link">
+					<a class="edudetails">Home</a>
+					<a class="edudetails">Experience</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--================End Home Banner Area =================-->
+
+<!-- display project which is public -->
+{% assign projects = site.projects | where: "is_public", true %}
+
+<!-- check if any project available or not -->
+{% if projects.size == 0 %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="portfolio_right_text">
+				<h4>No Project Available</h4>
+				<p>Sorry, there are no projects available at this time.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% else %}
+<!-- display all projects -->
+<section class="portfolio_details_area ">
+	<div class="container">
+
+{% assign sortedProjects = projects | sort: 'rank' %}
+{% for project in sortedProjects %}
+		<!-- ***** project start -->
+		<div class="portfolio_details_inner projectdetails">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="left_img">
+						<img class="img-fluid" src="{{ project.thumbnail }}" alt="Project Image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="portfolio_right_text">
+						<h4>{{ project.title }}</h4>
+
+						<p>{{ project.short_description }}</p>
+						<ul class="list">
+							<li><span>Level</span>: {{ project.project_level }} </li>
+							<li><span>Self Rating</span>: {% for i in (1..project.self_rating) %}<i class="fa fa-star"></i>{% endfor %}
+								</li>
+							<li><span>Location</span>: {{ project.location }} </li>
+							{% if project.github_repo_available %}
+							<li><span>Github </span>: <a target="_blank"
+									href="{{ project.github_repo }}">{{ project.github_repo | remove_first: 'https://' | truncate: 25, '...' }}</a></li>
+							{% endif %}
+							{% if project.is_completed %}
+							<li><span>Completed</span>: {{ project.completed_date }}</li>
+							{% endif %}							
+						</ul>
+						<p class="mt-10">
+							{% if project.is_live %}
+								<a target="_blank" href="{{ project.live_url }}" class="genric-btn info-border m-3">Live Preview</a>
+							{% endif %}
+							<a target="_blank" href="{{ project.url }}" class="genric-btn info-border">View More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			{% if project.features.size > 0 %}
+			<p>
+			<h5> Features: </h5>
+			<ul>
+				{% for feature in project.features %}
+				<li>{{ feature }}</li>
+				{% endfor %}
+			</ul>
+			</p>
+			{% endif %}
+			{% if project.technology_used.size > 0 %}
+			<p>
+			<h5> Technology Used: </h5>{{ project.technology_used  | join: ", " }}
+			</p>
+			{% endif %}
+		</div>
+		<!-- ***** project end -->
+{% endfor %}
+
+	</div>
+</section>
+{% endif %}
+
+<!-- include footer -->
+{% include footer.html %}
+
+<!-- Credits -->
+<div style="display: flex; justify-content: right;width: 95%;">
+	{% include credits.html %}
+</div>
+
+<script>
+	document.getElementById("experiencenavlink").classList.add("activenav");
+</script>
