@@ -28,6 +28,8 @@ url: "https://prathameshks.github.io" # the base hostname & protocol for your si
 collections:
   projects:
     output: true
+  experiences:
+    output: true
 
 
 # Build settings
@@ -52,4 +54,5 @@ exclude:
   - Old Site/
   - readme.md
   - _projects/sample.md
+  - _experiences/sample.md
   - extra/
