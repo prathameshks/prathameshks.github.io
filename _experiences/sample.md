@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /experiences/sample
 rank: 10 # sort by rank on experience page
 is_public: true # if true then only show else hide
 is_featured: true # show on home page or not

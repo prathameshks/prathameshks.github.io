@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/coding-world-website
 rank: 10
 title: Coding World Website
 featured_name: Coding World

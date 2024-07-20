@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/baam-foods-website
 rank: 3
 title: Baam Foods Website Backend
 featured_name: Baam Foods

@@ -1,9 +1,10 @@
 ---
 layout: page
+permalink: /experiences/gfg-campus-ambassador
 rank: 7 
 is_public: true
 is_featured: true 
-company_logo: /img/experience/geeksforgeeks_logo.jpeg
+company_logo: /img/experience/geeksforgeeks_logo.jpg
 company_name: Geeks For Geeks
 designation: Campus Ambassador (Campus Mantri)
 project_available: false 

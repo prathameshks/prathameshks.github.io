@@ -105,12 +105,13 @@
 .banner_area{
 	position: relative;
 	z-index: 1;
-	min-height: 430px;
+	min-height: 230px;
+	top:100px;
 	.banner_inner{
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		min-height: 430px;
+		min-height: 230px;
 		background: #f9f9ff;
 		z-index: 1;
 //		.overlay{

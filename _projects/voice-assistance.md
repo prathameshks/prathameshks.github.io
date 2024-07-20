@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/voice-assistance
 rank: 5
 title: Simple Voice Assistance in Python
 featured_name: Voice Assistance

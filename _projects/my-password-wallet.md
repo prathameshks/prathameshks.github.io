@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/my-password-wallet
 rank: 6
 title: My Password Wallet Password Manager
 featured_name: Password Manager

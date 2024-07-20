@@ -1,9 +1,10 @@
 ---
 layout: page
+permalink: /experiences/ccbul-webdev-internship
 rank: 15 
 is_public: true
 is_featured: true 
-company_logo: /img/experience/ccbul_logo.png
+company_logo: /img/experience/ccbul_logo.jpg
 company_name: CCBUL Consulting LLP
 designation: Web Developer Intern
 project_available: true 

@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/the-andhra-cafe-website
 rank: 1
 title: The Andhra Cafe Website Backend
 featured_name: Andhra Cafe

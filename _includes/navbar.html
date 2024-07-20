@@ -17,14 +17,15 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item "><a class="nav-link main-nav-link" id="homenavlink" href="/">Home</a></li>
-                        <li class="nav-item "><a class="nav-link main-nav-link" id="experiencenavlink" href="/experience.html">Experience</a></li>
-                         <!--<li class="nav-item"><a class="nav-link main-nav-link" id="projectnavlink" href="/projects.html">Projects</a></li>
-                       --> <li class="nav-item submenu dropdown ">
-                            <a href="/projects.html" id="projectnavlink" class="nav-link dropdown-toggle main-nav-link"
+                        <li class="nav-item "><a class="nav-link main-nav-link" id="experiencenavlink" href="/experience">Experience</a></li>
+                         <!--<li class="nav-item"><a class="nav-link main-nav-link" id="projectnavlink" href="/projects">Projects</a></li>
+                       --> 
+                         <li class="nav-item submenu dropdown ">
+                            <a href="/projects" id="projectnavlink" class="nav-link dropdown-toggle main-nav-link"
                                 data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false">Projects</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link nav-highlight" href="/projects.html">All Projects</a></li>
+                                <li class="nav-item"><a class="nav-link nav-highlight" href="/projects">All Projects</a></li>
                                 {% assign sortedProjects = site.projects | sort: 'rank' %}
                                 {% for project in sortedProjects %}
                                 {% if project.is_public and project.is_featured %}
@@ -38,12 +39,12 @@
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 									aria-haspopup="true" aria-expanded="false">Blog</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
+									<li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog">Blog Details</a>
 									</li>
 								</ul>
 							</li> -->
-                        <li class="nav-item"><a class="nav-link main-nav-link" id="contactnavlink" href="/contact.html">Contact Me</a></li>
+                        <li class="nav-item"><a class="nav-link main-nav-link" id="contactnavlink" href="/contact">Contact Me</a></li>
                     </ul>
                 </div>
             </div>

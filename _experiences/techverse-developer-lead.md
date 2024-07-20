@@ -1,9 +1,10 @@
 ---
 layout: page
+permalink: /experiences/techverse-developer-lead
 rank: 10
 is_public: true
 is_featured: true 
-company_logo: /img/experience/techverse_logo.png
+company_logo: /img/experience/techverse_logo.jpg
 company_name: TechVerse (Wadia College of Engineering)
 designation: Developer Lead
 project_available: false 

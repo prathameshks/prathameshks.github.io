@@ -12,15 +12,11 @@
     "percentage": 80
   },
   {
-    "name": "Django",
-    "percentage": 75
+    "name": "Web Development Backend(Django, PHP)",
+    "percentage": 80
   },
   {
-    "name": "Web Development Backend",
-    "percentage": 70
-  },
-  {
-    "name": "Java (Learning)",
+    "name": "ML (Learning)",
     "percentage": 30
   }
 ]

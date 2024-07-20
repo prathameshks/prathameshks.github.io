@@ -2,7 +2,7 @@
 <footer class="footer_area " style="padding: 30px;">
     <div class="container">
         <div class="row footer_inner">
-            <div class="col-lg-5 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <aside class="f_widget ab_widget">
                     <div class="f_title">
                         <h3>Prathamesh Sable</h3>
@@ -13,24 +13,38 @@
             </div>
 
             <!-- blank div  -->
-            <div class="col-lg-5 col-sm-6 ">
+            <div class="col-lg-3 col-sm-4 ">
                 <aside class="f_widget ab_widget">
                     <div class="f_title">
                         <h3>Links</h3>
                     </div>
                     <ul class="list " style="padding-bottom: 20px;">
                         <li><a class="anchor-no-dec" href="/">Home</a></li>
-                        <li><a class="anchor-no-dec" href="/projects.html">My Projects</a></li>
-                        <li><a class="anchor-no-dec" href="/contact.html#contactForm">Contact Me</a></li>
-                        <li><a class="anchor-no-dec" href="/contact.html#socialMediaLinks">Social Medias</a></li>
-                        <li><a class="anchor-no-dec" href="/contact.html#testimonial">Fill Testimonial</a></li>
+                        <li><a class="anchor-no-dec" href="/experience">Experience</a></li>
+                        <li><a class="anchor-no-dec" href="/projects">Projects</a></li>
+                        <li><a class="anchor-no-dec" href="/contact#contactForm">Contact Me</a></li>
+                        <li><a class="anchor-no-dec" href="/contact#testimonial">Fill Testimonial</a></li>
+                    </ul>
+                </aside>
+            </div>
+            
+            <div class="col-lg-3 col-sm-4 ">
+                <aside class="f_widget ab_widget">
+                    <div class="f_title">
+                        <h3>Project Links</h3>
+                    </div>
+                    <ul class="list " style="padding-bottom: 20px;">
+                        {% assign sortedProjects = site.projects | where: "is_public", true | where: "is_featured", true | sort: 'rank' %}
+                        {% for project in sortedProjects %}
+                        <li><a class="anchor-no-dec" href="{{ project.url }}">{{ project.featured_name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </aside>
             </div>
 
             <!--================ news letter start================ -->
 
-            <div class="col-lg-2 col-sm-6" style="padding-bottom: 10px;">
+            <div class="col-lg-2 col-sm-3" style="padding-bottom: 10px;">
                 <aside class="f_widget social_widget">
                     <div class="f_title">
                         <h3>Follow Me</h3>

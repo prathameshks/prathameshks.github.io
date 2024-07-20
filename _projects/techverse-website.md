@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/techverse-website
 rank: 2
 title: Techverse College Club Website
 featured_name: Techverse Website

@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/sample
 rank: 10
 title: Sample Project Title
 featured_name: Sample Project

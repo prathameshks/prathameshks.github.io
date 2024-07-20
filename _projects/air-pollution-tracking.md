@@ -1,5 +1,6 @@
 ---
 layout: project
+permalink: /projects/air-pollution-tracking
 rank: 7
 featured_name: Pollution Tracker
 title: Air Pollution & Weather Tracking
