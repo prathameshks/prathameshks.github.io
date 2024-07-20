@@ -1,0 +1,155 @@
+---
+layout: empty
+description: Hello, I am Prathamesh Sable, a skilled and experienced programmer with a passion for creating innovative
+software solutions. Here, you'll find a showcase of my past projects and technical skills.
+title: Prathamesh Sable
+---
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>experience-slider</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <style>
+        
+        .experience-slider {
+            margin: 20px;
+            /* border: 1px solid #7f7f7fa5; */
+            border-radius: 5%;
+            padding: 5%;
+            box-shadow: 10px 10px 25px 1px gray;
+        }
+
+        .experience-slider .experience-slider-content {
+            padding: 20px;
+            /* margin-bottom: 35px;*/
+            background: #fff;
+            position: relative;
+        }
+
+        /* .experience-slider .experience-slider-content:before {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            border-top: 15px solid #718076;
+            border-left: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        } 
+
+        .experience-slider .experience-slider-content:after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            border-top: 15px solid #718076;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+*/
+        .experience-slider .title {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #525252;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            margin: 0 0 5px 0;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .experience-slider .post {
+            display: block;
+            font-size: 14px;
+            color: #0CCA4A;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .experience-logo {
+            width: auto;
+            max-width: 100%;
+            height: 100px;
+        }
+
+        .owl-theme .owl-controls {
+            margin-top: 20px;
+        }
+
+        .owl-theme .owl-controls .owl-page span {
+            background: #ccc;
+            opacity: 1;
+            transition: all 0.4s ease 0s;
+        }
+
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls.clickable .owl-page:hover span {
+            background: #0CCA4A;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% assign experiences = site.experiences | where: "is_public", true | where : "is_featured", true | sort : 'rank' |
+    'reverse' %}
+
+    {% if experiences.size > 1 %}
+
+
+    <div class="container">
+        <div class="main_title">
+            <h2>Experience</h2>
+            <!-- <p>this part has my work experience about college clubs internships and jobs.</p> -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="experience-slider" class="owl-carousel" style="display: flex;">
+                    {% for experience in experiences %}
+                    <div class="experience-slider">
+                        <div class="experience-slider-content">
+                            <img class="experience-logo" src="{{ experience.company_logo }}" alt="">
+                        </div>
+                        <h3 class="title">{{ experience.company_name }}</h3>
+                        <span class="post">{{ experience.designation }}</span>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#experience-slider").owlCarousel({
+                items: 4,
+                itemsDesktop: [1000, 4],
+                itemsDesktopSmall: [980, 3],
+                itemsTablet: [768, 2],
+                itemsMobile: [650, 1],
+                // pagination: true,
+                navigation: false,
+                slideSpeed: 1000,
+                autoPlay: true,
+                center: true
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 ---
 layout: default
-description: Hello, I am Prathamesh Sable, a skilled and experienced programmer with a passion for creating innovative software solutions. Here, you'll find a showcase of my past projects and technical skills.
+permalink: /projects/
+description: "Explore a diverse range of captivating projects developed by Prathamesh Sable. Discover innovative
+solutions and technical expertise in action. Let's build something amazing together!"
 title: Projects | Prathamesh Sable
 ---
 
@@ -46,8 +48,8 @@ title: Projects | Prathamesh Sable
 <section class="portfolio_details_area ">
 	<div class="container">
 
-{% assign sortedProjects = projects | sort: 'rank' %}
-{% for project in sortedProjects %}
+		{% assign sortedProjects = projects | sort: 'rank' %}
+		{% for project in sortedProjects %}
 		<!-- ***** project start -->
 		<div class="portfolio_details_inner projectdetails">
 			<div class="row">
@@ -63,20 +65,22 @@ title: Projects | Prathamesh Sable
 						<p>{{ project.short_description }}</p>
 						<ul class="list">
 							<li><span>Level</span>: {{ project.project_level }} </li>
-							<li><span>Self Rating</span>: {% for i in (1..project.self_rating) %}<i class="fa fa-star"></i>{% endfor %}
-								</li>
+							<li><span>Self Rating</span>: {% for i in (1..project.self_rating) %}<i
+									class="fa fa-star"></i>{% endfor %}
+							</li>
 							<li><span>Location</span>: {{ project.location }} </li>
 							{% if project.github_repo_available %}
-							<li><span>Github </span>: <a target="_blank"
-									href="{{ project.github_repo }}">{{ project.github_repo | remove_first: 'https://' | truncate: 25, '...' }}</a></li>
+							<li><span>Github </span>: <a target="_blank" href="{{ project.github_repo }}">{{
+									project.github_repo | remove_first: 'https://' | truncate: 25, '...' }}</a></li>
 							{% endif %}
 							{% if project.is_completed %}
 							<li><span>Completed</span>: {{ project.completed_date }}</li>
-							{% endif %}							
+							{% endif %}
 						</ul>
 						<p class="mt-10">
 							{% if project.is_live %}
-								<a target="_blank" href="{{ project.live_url }}" class="genric-btn info-border m-3">Live Preview</a>
+							<a target="_blank" href="{{ project.live_url }}" class="genric-btn info-border m-3">Live
+								Preview</a>
 							{% endif %}
 							<a target="_blank" href="{{ project.url }}" class="genric-btn info-border">View More</a>
 						</p>
@@ -95,12 +99,12 @@ title: Projects | Prathamesh Sable
 			{% endif %}
 			{% if project.technology_used.size > 0 %}
 			<p>
-			<h5> Technology Used: </h5>{{ project.technology_used  | join: ", " }}
+			<h5> Technology Used: </h5>{{ project.technology_used | join: ", " }}
 			</p>
 			{% endif %}
 		</div>
 		<!-- ***** project end -->
-{% endfor %}
+		{% endfor %}
 
 	</div>
 </section>
