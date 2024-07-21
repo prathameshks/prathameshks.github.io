@@ -1,5 +1,13 @@
-// var backendUrl = 'http://127.0.0.1:8000';
-var backendUrl = 'https://prathameshsable.pythonanywhere.com';
+// const backendUrl = 'http://127.0.0.1:8000';
+const backendUrl = 'https://prathameshsable.pythonanywhere.com';
+
+function setLoading(message){
+    console.log('Loading :',message);
+}
+
+function offLoading(){
+    console.log('Loading Complete');
+}
 
 window.onload = async function () {
     fetch(backendUrl + '/api/', {
@@ -23,3 +31,5 @@ window.onload = async function () {
         }
     })
 }
+
+

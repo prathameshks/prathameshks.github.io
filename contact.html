@@ -69,46 +69,48 @@ title: Contact | Prathamesh Sable
 						</div>
 					</div>
 				</div>
-				<iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;" onload=""></iframe>
-
+				
 				<div class="col-lg-9 ">
-					<!-- https://docs.google.com/forms/d/e/1FAIpQLScaRpCGeC_rgsJxMffZoI3MQ6yLGPfL1BCwT74WWU3RwPCG6w/viewform?usp=pp_url&entry.740322995=myname&entry.216367613=my@email&entry.1502902599=musub&entry.381632486=mymessage -->
-
-					<form class="row contact_form" name="gform2" id="gform2" enctype="text/plain"
-						action="https://docs.google.com/forms/d/e/1FAIpQLScaRpCGeC_rgsJxMffZoI3MQ6yLGPfL1BCwT74WWU3RwPCG6w/formResponse?"
-						target="hidden_iframe2" onsubmit="submittedcontact=true;">
+					<form class="row contact_form" id="contact_form">
 						<div class="col-md-6">
 							<div class="form-group bordercard">
-								<input type="text" class=" form-control" id="entry.740322995" name="entry.740322995"
+								<input type="text" class="form-control" id="name" name="name"
 									placeholder="Enter your name">
 							</div>
 							<div class="form-group bordercard">
-								<input type="email" class="form-control" id="entry.216367613" name="entry.216367613"
+								<input type="email" class="form-control" id="email" name="email"
 									placeholder="Enter email address">
 							</div>
 							<div class="form-group bordercard">
-								<input type="text" class="form-control" id="entry.1502902599" name="entry.1502902599"
+								<input type="text" class="form-control" id="subject" name="subject"
 									placeholder="Enter Subject">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group bordercard">
-								<textarea class="form-control" name="entry.381632486" id="entry.381632486" rows="1"
+								<textarea class="form-control" name="message" id="message" rows="1"
 									placeholder="Enter Message"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12 text-center">
-							<button id="feedbacksubmit" type="submit" value="submit" class="btn submit_btn">Send
+							<button id="contactformsubmit" type="submit" value="submit" class="btn submit_btn">Send
 								Feedback</button>
 						</div>
 					</form>
-					<div class="submitcard center displaynone" id="info2">
-
-
+					<div class="submitcard center displaynone" id="contact_success">
 						<p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt="">
 						<h1>Thank You!</h1>The form submitted successfully.</p>
-
-
+					</div>
+					<div class="center displaynone" id="contact_fail">
+						<!-- <p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt=""> -->
+							<p>
+						<strong>Opps!</strong>
+							The form Can not be submitted.
+							<br>
+							Please Let Me Know on the Email 
+							<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id }}</a>
+							Thank you for your time.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -315,33 +317,29 @@ title: Contact | Prathamesh Sable
 		<div class="feedbackrow">
 			<div class="col-lg-6">
 				<div class="">
-					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
-
 					<div class="featurecard  bordercard">
 						<h3 class="mb-30 title_color">Write Me Testimonials</h3>
-						<form name="gform" id="gform" enctype="text/plain"
-							action="https://docs.google.com/forms/d/e/1FAIpQLSfAjvzCO1fiQfSh1V3ubTfinCfIwRhtM0Xsv-lwIDPEpz2sMw/formResponse?"
-							target="hidden_iframe" onsubmit="submitted=true;">
+						<form id="testimonial_form">
 							<div class="mt-10">
-								<input type="text" name="entry.1806678454" id="entry.1806678454" placeholder="Name"
+								<input type="text" name="name" id="name" placeholder="Name"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
 									class="single-input bordercard">
 							</div>
 
 							<div class="mt-10">
-								<input type="email" name="entry.1780327417" id="entry.1780327417"
+								<input type="email" name="email" id="email"
 									placeholder="Email address" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Email address'" required
 									class="single-input bordercard">
 							</div>
 
 							<div class="mt-10">
-								<textarea class="single-textarea bordercard" name="entry.1400185441"
-									id="entry.1400185441" placeholder="What You Think About Me"
+								<textarea class="single-textarea bordercard" name="message"
+									id="message" placeholder="What You Think About Me"
 									onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'What You Think About Me'" required></textarea>
 							</div>
-							<input type="text" name="entry.189461409" id="entry.189461409" class="single-input-primary"
+							<input type="text" name="rating" id="rating" class="single-input-primary"
 								value="5" max="5" hidden>
 							<div class="mt-10 mb-2">
 								<label class="mb-0" for="">Rating</label>
@@ -368,13 +366,23 @@ title: Contact | Prathamesh Sable
 									onclick="setrating('0');">Reset Form</button>
 							</div>
 						</form>
-						<div class="submitcard center displaynone" id="info">
-
+						<div class="submitcard center displaynone" id="testimonial_success">
 							<p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt="">
 							<h1>Thank You!</h1>The form submitted successfully.</p>
-
-
 						</div>
+
+						<div class="center displaynone" id="testimonial_fail">
+							<!-- <p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt=""> -->
+								<p>
+							<strong>Opps!</strong>
+								The form Can not be submitted.
+								<br>
+								Please Let Me Know on the Email 
+								<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id }}</a>
+								Thank you for your time.
+							</p>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -405,18 +413,6 @@ title: Contact | Prathamesh Sable
 <script type="text/javascript">var submitted = false;</script>
 <script type="text/javascript">
 	document.getElementById("contactnavlink").classList.add("activenav");
-
-	$('#gform').on('submit', function (e) {
-		document.getElementById("gform").style.display = 'none';
-		document.getElementById("info").classList.remove("displaynone");
-		// document.getElementById("info").innerHTML = "Form Submitted Sucessfully.";
-
-	});
-	$('#gform2').on('submit', function (e) {
-		document.getElementById("gform2").style.display = 'none';
-		document.getElementById("info2").classList.remove("displaynone");
-		// document.getElementById("info2").innerHTML = "Form Submitted Sucessfully.";
-	});
 
 	function setrating(rating) {
 		document.getElementById("rating_star_1").classList.remove("fa-star");
@@ -471,6 +467,75 @@ title: Contact | Prathamesh Sable
 			document.getElementById("rating_star_5").classList.add("fa-star-o");
 
 		}
-		document.getElementById("entry.189461409").setAttribute("value", rating);
+		document.getElementById("rating").setAttribute("value", rating);
 	}
+</script>
+
+<script type="module">
+    // import { backendUrl, setLoading, offLoading } from '/js/script.js';
+    window.onload = async () => {
+        // await setEvent(); 
+        offLoading();
+
+		document.getElementById('contact_form').addEventListener('submit', function (e) {
+			e.preventDefault();
+			setLoading("Submitting Your Message");
+			var url = backendUrl + "/forms/contact/";
+			var data = new FormData(e.target);
+			fetch(url, {
+				method: 'POST',
+				body: data
+			}).then(response => response.ok ? response.json() : response.json().then(error => { throw error; }))
+				.then(data => { console.log('Form Submitted'); handleContactFormSuccess(); })
+				.catch((error) => { console.error('Error:', error); console.error('data:', data); handleContactFormError(error); });
+			// offLoading();
+		});
+
+		document.getElementById('testimonial_form').addEventListener('submit', function (e) {
+			e.preventDefault();
+			setLoading("Submitting Your Message");
+			var url = backendUrl + "/forms/testimonial/";
+			var data = new FormData(e.target);
+			fetch(url, {
+				method: 'POST',
+				body: data
+			}).then(response => response.ok ? response.json() : response.json().then(error => { throw error; }))
+				.then(data => { console.log('Form Submitted'); handleTestimonialFormSuccess(); })
+				.catch((error) => { console.error('Error:', error); console.error('data:', data); handleTestimonialFormError(error); });
+			// offLoading();
+		});
+
+	
+    };
+    function handleContactFormSuccess() {
+        offLoading();
+        document.getElementById("contact_form").reset();
+        // alert("Your Message Submitted Successfully");
+        document.getElementById("contact_form").style.display = "none";
+        document.getElementById("contact_success").classList.remove("displaynone");
+		document.getElementById("contact_fail").classList.add("displaynone");
+    }
+    function handleContactFormError(error) {
+		offLoading();
+		document.getElementById("contact_fail").classList.remove("displaynone");
+		document.getElementById("contact_success").classList.add("displaynone");
+    }
+	
+    
+	function handleTestimonialFormSuccess() {
+		offLoading();
+		document.getElementById("testimonial_form").reset();
+		// alert("Your Message Submitted Successfully");
+		document.getElementById("testimonial_form").style.display = "none";
+		document.getElementById("testimonial_success").classList.remove("displaynone");
+		document.getElementById("testimonial_fail").classList.add("displaynone");
+	}
+
+	function handleTestimonialFormError(error) {
+		offLoading();
+		document.getElementById("testimonial_fail").classList.remove("displaynone");
+		document.getElementById("testimonial_success").classList.add("displaynone");
+	}
+
+    
 </script>
