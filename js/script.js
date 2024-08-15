@@ -1,5 +1,5 @@
-// const backendUrl = 'http://127.0.0.1:8000';
-const backendUrl = 'https://prathameshsable.pythonanywhere.com';
+const backendUrl = 'http://127.0.0.1:8000';
+// const backendUrl = 'https://prathameshsable.pythonanywhere.com';
 
 function setLoading(message){
     console.log('Loading :',message);

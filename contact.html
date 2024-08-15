@@ -6,6 +6,8 @@ project needs or explore potential opportunities."
 title: Contact | Prathamesh Sable
 ---
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <!-- include header -->
 {% include navbar.html %}
 
@@ -69,7 +71,7 @@ title: Contact | Prathamesh Sable
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-lg-9 ">
 					<form class="row contact_form" id="contact_form">
 						<div class="col-md-6">
@@ -92,7 +94,10 @@ title: Contact | Prathamesh Sable
 									placeholder="Enter Message"></textarea>
 							</div>
 						</div>
-						<div class="col-md-12 text-center">
+						<div class="col-md-6 text-center">
+							<div class="g-recaptcha" data-sitekey="{{ site.data.vars.recaptcha.site_key }}"></div>
+						</div>
+						<div class="col-md-6 text-center">
 							<button id="contactformsubmit" type="submit" value="submit" class="btn submit_btn">Send
 								Feedback</button>
 						</div>
@@ -103,12 +108,14 @@ title: Contact | Prathamesh Sable
 					</div>
 					<div class="center displaynone" id="contact_fail">
 						<!-- <p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt=""> -->
-							<p>
-						<strong>Opps!</strong>
-							The form Can not be submitted.
+						<p>
+							<strong>Oopps!</strong>
+							<span id="contact_error_msg">The form Can not be submitted.</span>
+							
 							<br>
-							Please Let Me Know on the Email 
-							<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id }}</a>
+							If You Thing That's The Bug in Website, Please Let Me Know on the Email
+							<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id
+								}}</a><br>
 							Thank you for your time.
 						</p>
 					</div>
@@ -320,28 +327,26 @@ title: Contact | Prathamesh Sable
 					<div class="featurecard  bordercard">
 						<h3 class="mb-30 title_color">Write Me Testimonials</h3>
 						<form id="testimonial_form">
-							<div class="mt-10">
+							<div class="mt-10 col-md-12">
 								<input type="text" name="name" id="name" placeholder="Name"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
 									class="single-input bordercard">
 							</div>
 
-							<div class="mt-10">
-								<input type="email" name="email" id="email"
-									placeholder="Email address" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Email address'" required
+							<div class="mt-10 col-md-12">
+								<input type="email" name="email" id="email" placeholder="Email address"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
 									class="single-input bordercard">
 							</div>
 
-							<div class="mt-10">
-								<textarea class="single-textarea bordercard" name="message"
-									id="message" placeholder="What You Think About Me"
-									onfocus="this.placeholder = ''"
+							<div class="mt-10 col-md-12">
+								<textarea class="single-textarea bordercard" name="message" id="message"
+									placeholder="What You Think About Me" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'What You Think About Me'" required></textarea>
 							</div>
-							<input type="text" name="rating" id="rating" class="single-input-primary"
-								value="5" max="5" hidden>
-							<div class="mt-10 mb-2">
+							<input type="text" name="rating" id="rating" class="single-input-primary" value="5" max="5"
+								hidden>
+							<div class="mt-10 mb-2 col-md-12">
 								<label class="mb-0" for="">Rating</label>
 								<div class="p-1 ml-2 mt-0 pt-0 row w-25" style="flex-wrap: nowrap !important;">
 									<a class="" style="color: #ffc000;" onclick="setrating('1')"><i id="rating_star_1"
@@ -355,6 +360,10 @@ title: Contact | Prathamesh Sable
 									<a class="" style="color: #ffc000;" onclick="setrating('5')"><i id="rating_star_5"
 											class="fa fa-star-o"></i></a>
 								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="g-recaptcha" data-sitekey="{{ site.data.vars.recaptcha.site_key }}"></div>
 							</div>
 
 							<div class="row center">
@@ -373,12 +382,15 @@ title: Contact | Prathamesh Sable
 
 						<div class="center displaynone" id="testimonial_fail">
 							<!-- <p class="card-p"><img src="/img/socialmedia/sucesstick.svg" alt=""> -->
-								<p>
-							<strong>Opps!</strong>
-								The form Can not be submitted.
+							<p>
+								<strong>Oopps!</strong>
+								<span id="testimonial_error_msg">
+									The form Can not be submitted.
+								</span>
 								<br>
-								Please Let Me Know on the Email 
-								<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id }}</a>
+								If You think that's the bug in website, Please Let Me Know on the Email
+								<a href="mailto:{{ site.data.vars.social.email.id }}">{{ site.data.vars.social.email.id
+									}}</a><br>
 								Thank you for your time.
 							</p>
 						</div>
@@ -472,10 +484,10 @@ title: Contact | Prathamesh Sable
 </script>
 
 <script type="module">
-    // import { backendUrl, setLoading, offLoading } from '/js/script.js';
-    window.onload = async () => {
-        // await setEvent(); 
-        offLoading();
+	// import { backendUrl, setLoading, offLoading } from '/js/script.js';
+	window.onload = async () => {
+		// await setEvent(); 
+		offLoading();
 
 		document.getElementById('contact_form').addEventListener('submit', function (e) {
 			e.preventDefault();
@@ -486,8 +498,8 @@ title: Contact | Prathamesh Sable
 				method: 'POST',
 				body: data
 			}).then(response => response.ok ? response.json() : response.json().then(error => { throw error; }))
-				.then(data => { console.log('Form Submitted'); handleContactFormSuccess(); })
-				.catch((error) => { console.error('Error:', error); console.error('data:', data); handleContactFormError(error); });
+				.then(data => { /*console.log('Form Submitted');*/ handleContactFormSuccess(); })
+				.catch((error) => { /*console.error('Error:', error); console.error('data:', data);*/ handleContactFormError(error); });
 			// offLoading();
 		});
 
@@ -500,28 +512,31 @@ title: Contact | Prathamesh Sable
 				method: 'POST',
 				body: data
 			}).then(response => response.ok ? response.json() : response.json().then(error => { throw error; }))
-				.then(data => { console.log('Form Submitted'); handleTestimonialFormSuccess(); })
-				.catch((error) => { console.error('Error:', error); console.error('data:', data); handleTestimonialFormError(error); });
+				.then(data => { /*console.log('Form Submitted');*/ handleTestimonialFormSuccess(); })
+				.catch((error) => { /*console.error('Error:', error); console.error('data:', data);*/ handleTestimonialFormError(error); });
 			// offLoading();
 		});
 
-	
-    };
-    function handleContactFormSuccess() {
-        offLoading();
-        document.getElementById("contact_form").reset();
-        // alert("Your Message Submitted Successfully");
-        document.getElementById("contact_form").style.display = "none";
-        document.getElementById("contact_success").classList.remove("displaynone");
-		document.getElementById("contact_fail").classList.add("displaynone");
-    }
-    function handleContactFormError(error) {
+
+	};
+	function handleContactFormSuccess() {
 		offLoading();
+		document.getElementById("contact_form").reset();
+		// alert("Your Message Submitted Successfully");
+		document.getElementById("contact_form").style.display = "none";
+		document.getElementById("contact_success").classList.remove("displaynone");
+		document.getElementById("contact_fail").classList.add("displaynone");
+	}
+	function handleContactFormError(error) {
+		offLoading();
+		if(error.message){
+			document.getElementById("contact_error_msg").innerHTML = error.message;
+		}
 		document.getElementById("contact_fail").classList.remove("displaynone");
 		document.getElementById("contact_success").classList.add("displaynone");
-    }
-	
-    
+	}
+
+
 	function handleTestimonialFormSuccess() {
 		offLoading();
 		document.getElementById("testimonial_form").reset();
@@ -533,9 +548,12 @@ title: Contact | Prathamesh Sable
 
 	function handleTestimonialFormError(error) {
 		offLoading();
+		if(error.message){
+			document.getElementById("testimonial_error_msg").innerHTML = error.message;
+		}
 		document.getElementById("testimonial_fail").classList.remove("displaynone");
 		document.getElementById("testimonial_success").classList.add("displaynone");
 	}
 
-    
+
 </script>

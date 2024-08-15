@@ -49,5 +49,8 @@
   "resume": {
     "link": "/docs/prathamesh_sable_resume.pdf",
     "name": "Prathamesh_Sable_Resume.pdf"
+  },
+  "recaptcha":{
+    "site_key": "6LekfScqAAAAAClhrb0AJaVHoCqlegXYzYDn3dob"
   }
 }
