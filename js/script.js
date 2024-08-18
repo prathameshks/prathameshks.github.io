@@ -1,12 +1,15 @@
-const backendUrl = 'http://127.0.0.1:8000';
-// const backendUrl = 'https://prathameshsable.pythonanywhere.com';
+// const backendUrl = 'http://127.0.0.1:8000';
+const backendUrl = 'https://prathameshsable.pythonanywhere.com';
 
-function setLoading(message){
-    console.log('Loading :',message);
+function setLoading(message = "Loading..."){
+    document.getElementById("loader_div").style.display = "flex";
+    document.getElementById("loader_text").innerHTML = message;
+    // console.log('Loading :',message);
 }
 
 function offLoading(){
-    console.log('Loading Complete');
+    document.getElementById("loader_div").style.display = "none";
+    // console.log('Loading Complete');
 }
 
 window.onload = async function () {

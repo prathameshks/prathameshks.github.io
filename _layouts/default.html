@@ -47,13 +47,17 @@
 </head>
 
 <body>
+	<div class="loader_div" id="loader_div" style="display: none;">
+		<div class="loader_spinner" id="loader_spinner"></div>
+		<div class="loader_text" id="loader_text">Loading...</div>
+	</div>
 
 	{{ content }}
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="/js/jquery-3.2.1.min.js"></script>
 	<script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
-	
+
 	<script src="/js/popper.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/stellar.js"></script>
