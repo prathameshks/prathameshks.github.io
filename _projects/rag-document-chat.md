@@ -38,7 +38,11 @@ This project started with learning about RAG on Colab through a following **YouT
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qN_2fnOPY-M?si=dJmfAF3n7uDG27oI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-I then expanded it to include LangChain for simplifying workflows, added a user-friendly **Streamlit UI**, and deployed the final application on **Hugging Face Spaces** for seamless access.
+I then expanded it to include LangChain for simplifying workflows and Multiple Files support, using the following tutorial.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2TJxpyO3ei4?si=5pTgdU9KXzK3HH3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Then, I added a user-friendly **Streamlit UI**, and deployed the final application on **Hugging Face Spaces** for seamless access.
 
 The application allows users to upload various file types (PDFs, Word documents, Text, MD Files) and chat with them using an AI-driven system. It combines robust AI models with intuitive usability.
 
