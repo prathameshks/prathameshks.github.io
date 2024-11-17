@@ -9,7 +9,7 @@ is_featured: false
 thumbnail: /img/projects/neural-network-from-scratch.png
 short_description: Developed a neural network entirely from scratch using NumPy, implementing all functionality within NumPy arrays to understand the fundamentals of deep learning.
 project_level: Advanced
-self_rating: 4.5
+self_rating: 5
 location: Pune (Maharashtra)
 github_repo_available: true
 github_repo: https://github.com/prathameshks/Handwritten-Numbers-Detection
